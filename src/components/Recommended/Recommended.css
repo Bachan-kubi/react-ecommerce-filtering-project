@@ -1,0 +1,22 @@
+.reco-btn {
+  margin: 5px;
+  padding: 10px 20px;
+  margin-right: 6px;
+  background: transparent;
+  border: 0.6px solid rgb(85, 83, 83);
+  border-radius: 5px;
+  color: #232323;
+  cursor: pointer;
+  font-weight: 700;
+}
+.recommended-btn {
+  display: flex;
+  margin-left: 20rem;
+}
+.reco-title {
+  margin-left: 20rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 25px;
+  font-family: sans-serif;
+}
