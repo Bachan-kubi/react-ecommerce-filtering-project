@@ -38,3 +38,19 @@
 .category-level input:checked ~ .checkmark{
     background-color: rgb(12, 184, 184);
 }
+.checkmark::after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+.category-level input:checked ~ .checkmark::after{
+    display: block;
+}
+.category-level .checkmark::after{
+    top: 6.3px;
+    left: 6.3px;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    background-color: white;
+}

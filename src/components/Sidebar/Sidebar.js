@@ -5,16 +5,16 @@ import Category from './Category/Category';
 import Price from './Price/Price';
 import Colors from './Colors/Colors';
 
-const Sidebar = () => {
+const Sidebar = ({handleRadioChange}) => {
     return (
         <>
             <div className="sidebars">
                 <div className="logo-container">
                     <BsCart4 className='logo' />
                 </div>
-                <Category />
-                <Price />
-                <Colors />
+                <Category handleRadioChange={handleRadioChange} />
+                <Price handleRadioChange={handleRadioChange} />
+                <Colors handleRadioChange={handleRadioChange} />
             </div>
         </>
     );
