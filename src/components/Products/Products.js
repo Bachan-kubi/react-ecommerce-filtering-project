@@ -4,7 +4,6 @@ import "./Products.css";
 
 
 const Products = ({result}) => {
-  console.log(result)
 
   return (
     <>

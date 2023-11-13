@@ -7,11 +7,11 @@ const Recommended = ({handleButton}) => {
         <>
             <h4 className='reco-title'>Recommended Products</h4>
             <section className="recommended-btn">
-                <Button onClickHandler={handleButton} className='reco-btn' value="All Products" title="All Products"></Button>
-                <Button onClickHandler={handleButton} className='reco-btn' value="nike" title="Nike"></Button>
-                <Button onClickHandler={handleButton} className='reco-btn' value="addidas" title="Addidas">All Products</Button>
-                <Button onClickHandler={handleButton} className='reco-btn' value="vans" title="Vans"></Button>
-                
+                <Button onClickHandler={handleButton} className='reco-btn' value="" title="All Products"></Button>
+                <Button onClickHandler={handleButton} className='reco-btn' value="Nike" title="Nike"></Button>
+                <Button onClickHandler={handleButton} className='reco-btn' value="Adidas" title="Adidas"></Button>
+                <Button onClickHandler={handleButton} className='reco-btn' value="Puma" title="Puma"></Button>
+                <Button onClickHandler={handleButton} className='reco-btn' value="Vans" title="Vans"></Button>
             </section>
         </>
     );

@@ -19,13 +19,10 @@ function App() {
     setQuery(e.target.value);
   }
 
-  // const filteredItems = products.filter(product=>{
-  //   product.title.toLocaleLowerCase().includes(query.toLocaleLowerCase()!== -1)
-  // });
-
-  const filteredItems = products.filter(product => {
-    return product.title.toLowerCase().includes(query.toLowerCase());
-});
+// filter data from db. 
+  const filteredItems = products.filter(
+    (product)=>product.title.toLowerCase().indexOf(query.toLowerCase())!== -1
+  );
 
 
   // Radio filter
