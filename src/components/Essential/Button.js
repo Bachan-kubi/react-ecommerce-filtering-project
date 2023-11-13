@@ -1,9 +1,10 @@
 import React from 'react';
+import '../Recommended/Recommended.css';
 
-const Button = () => {
+const Button = ({onClickHandler, value, title}) => {
     return (
         <div>
-            <h2>Button</h2>
+            <button onClick={onClickHandler} value={value} className='reco-btn'>{title}</button>
         </div>
     );
 };

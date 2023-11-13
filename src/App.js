@@ -19,9 +19,14 @@ function App() {
     setQuery(e.target.value);
   }
 
-  const filteredItems = products.filter((product)=>{
-    product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()!== -1)
-  });
+  // const filteredItems = products.filter(product=>{
+  //   product.title.toLocaleLowerCase().includes(query.toLocaleLowerCase()!== -1)
+  // });
+
+  const filteredItems = products.filter(product => {
+    return product.title.toLowerCase().includes(query.toLowerCase());
+});
+
 
   // Radio filter
   const handleRadioChange = (e)=>{
@@ -48,13 +53,13 @@ function App() {
         company === selected
       )})
     }
-    return filteredProducts.map(({img, title, review, star, newPrice, prevPrice})=>{
+    return filteredProducts.map(({img, title, reviews, star, newPrice, prevPrice})=>{
       return(
         <Card 
           key={Math.random()}
           img={img}
           title={title}
-          review = {review}
+          reviews = {reviews}
           star = {star}
           newPrice= {newPrice}
           prevPrice = {prevPrice}
@@ -69,9 +74,9 @@ function App() {
   return (
     <>
       <Sidebar handleRadioChange={handleRadioChange} />
-      <Nav />
-      <Recommended />
-      <Products />
+      <Nav query={query} handleInputChange={handleInputChange} />
+      <Recommended handleButton={handleButton} />
+      <Products result={result} />
     </>
   );
 }

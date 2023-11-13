@@ -1,16 +1,17 @@
 import React from 'react';
 import "./Recommended.css";
+import Button from '../Essential/Button';
 
-const Recommended = () => {
+const Recommended = ({handleButton}) => {
     return (
         <>
             <h4 className='reco-title'>Recommended Products</h4>
             <section className="recommended-btn">
-                <button className='reco-btn'>All Producs</button>
-                <button className='reco-btn'>Nike</button>
-                <button className='reco-btn'>Addidas</button>
-                <button className='reco-btn'>Puma</button>
-                <button className='reco-btn'>Vans</button>
+                <Button onClickHandler={handleButton} className='reco-btn' value="All Products" title="All Products"></Button>
+                <Button onClickHandler={handleButton} className='reco-btn' value="nike" title="Nike"></Button>
+                <Button onClickHandler={handleButton} className='reco-btn' value="addidas" title="Addidas">All Products</Button>
+                <Button onClickHandler={handleButton} className='reco-btn' value="vans" title="Vans"></Button>
+                
             </section>
         </>
     );
